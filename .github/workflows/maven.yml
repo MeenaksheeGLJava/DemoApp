@@ -34,7 +34,7 @@ jobs:
         
     - name: Copy JAR to GCP Compute Engine
       run: |
-        gcloud compute scp --zone=asia-south1-c target/*.jar meenak_sharma2008@instance-20240601-130107:~
+        gcloud compute scp --zone=asia-south1-c target/*.jar meenak_sharma2008@instance-20240601-130107
 
     - name: Start JAR on GCP Compute Engine
       run: |
