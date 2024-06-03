@@ -32,7 +32,7 @@ jobs:
 
     - name: Stop JAR on GCP Compute Engine if running
       run: |
-        gcloud compute ssh --zone=asia-south1-c meenak_sharma2008@instance-20240601-130107 --command="if pgrep -f DemoApp-0.0.1-SNAPSHOT.jar > /dev/null; then sudo pkill -f GroundBookingApp-0.0.1-SNAPSHOT.jar; else echo 'No process found'; fi"
+        gcloud compute ssh --zone=asia-south1-c meenak_sharma2008@instance-20240601-130107 --command="if pgrep -f DemoApp-0.0.1-SNAPSHOT.jar > /dev/null; then sudo pkill -f DemoApp-0.0.1-SNAPSHOT.jar; else echo 'No process found'; fi"
         
     - name: Copy JAR to GCP Compute Engine
       run: |
