@@ -40,7 +40,7 @@ jobs:
       run: |
         gcloud compute ssh --zone=asia-south1-c meenak_sharma2008@instance-20240601-130107 --command="screen -dm java -jar ~/DemoApp-0.0.1-SNAPSHOT.jar"
         sleep 20
-        gcloud compute ssh --zone=asia-south1-c meenak_sharma2008@instance-20240601-130107 --command="if pgrep -f GroundBookingApp-0.0.1-SNAPSHOT.jar > /dev/null; then echo 'Server started'; else echo 'Server failed to start'; exit 1; fi"
+        gcloud compute ssh --zone=asia-south1-c meenak_sharma2008@instance-20240601-130107 --command="if pgrep -f DemoApp-0.0.1-SNAPSHOT.jar > /dev/null; then echo 'Server started'; else echo 'Server failed to start'; exit 1; fi"
 
 
 # Change project_id, service_account_key, --zone, jar_name
